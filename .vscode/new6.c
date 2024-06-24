@@ -11,7 +11,7 @@ printf("Enter your name=>"); // Ask user to Enter name
 scanf("%[^\n]s",&name); // input your name and assign to name variable
  printf("Enter your age:=");
  scanf("%d",&age);
- if(age<=18){
+ if(age>=18){
 printf("wel come to our web site\n");
 printf("enter your amount:=");
 scanf("%d",&amount);
@@ -20,10 +20,6 @@ char subject[4][10]={"khakara","maggie","chocolet","milk"};  // item list
 
 int price[50]; // user input price
 int total=0; // Total sum of item
-
-
-
-
 for (int i = 0; i<4; i++)
 {
 

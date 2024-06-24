@@ -1,2 +1,1 @@
-
-        printf("Enter your value:=");
+  printf("%d",arr[x]);

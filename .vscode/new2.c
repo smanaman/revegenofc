@@ -1,39 +1,50 @@
 #include<stdio.h>
 #include<string.h>
-float calculate_percentage(int total,int number_subject){
-    return(float)total/number_subject; // percentage of total marks
-}
+
 
 int main(){
+    
 char name[100]; // user name
-char subject[4][10]={"Math","Hindi","GK","Science"};  // Subject list
-int number_subject=4; // number of subjects
-int mark[50]; // user input marks
-int total=0; // Total sum of marks
-float percentage; // percentage of marks
+char fruits[4][10]={"apple","mango","pinaple","banana"};  
 
-printf("Enter your name=>"); // Ask user to Enter name
+int price[50]; 
+int total=0; 
 
-scanf("%[^\n]s",&name); // input your name and assign to name variable
+char s[1000]; 
 
-printf("Your name is : %s\n",name); // User will see his name on screen.
+printf("Enter your name: "); 
+scanf("%[^\n]s",&name); 
+
+
+printf("Your name is : %s\n",name);
 
 
 for (int i = 0; i<4; i++)
 {
 
-    printf("Subject : %s\n ",subject[i]); // print subject list
+    printf("Enter the price of %s : ",fruits[i]); 
 
-    scanf("%d",&mark[i]); // assign marks into mark variable
+    scanf("%d",&price[i]); // assign marks into mark variable
 
-    total += mark[i]; // add marks to total
+    total += price[i]; // add marks to total
 
 }
 
+//printf("%d",total);
 
-percentage = calculate_percentage(total,number_subject); // assign total and number of subject
+itoa(total, s, 10);
 
-printf("Your percentage is :  %.2f",percentage); // show user his percentage
+printf("%s\n", s);
+
+FILE *fp;
+
+fp = fopen("luli.txt","w");
+
+fputs(s,fp);
+fclose(fp);
+
+
+
 
 
 }
